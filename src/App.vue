@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/work">Work</router-link>
-    </nav>
-
+    <AppHeader />
     <div class="container">
       <router-view/>
     </div>
@@ -40,3 +35,15 @@ body{
   }
 }
 </style>
+
+<script>
+import '@/index.scss'
+import AppHeader from '@/components/layouts/AppHeader.vue'
+
+export default {
+  name: 'App',
+  components: {
+    AppHeader
+  }
+}
+</script>
