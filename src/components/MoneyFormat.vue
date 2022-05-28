@@ -1,8 +1,7 @@
 <template>
     <div class="money">
-      <h1>{{ msg }}</h1>
-      <p>1日圓 = 0.23台幣 ， 1美金 = 29.62台幣</p>
-      <div class="currancy">
+      <h3>1日圓 = 0.23台幣 ， 1美金 = 29.62台幣</h3>
+      <div class="currency">
         <div class="twd">
           <input type="text" name="" id="twd" v-model="twd" required>
           <div class="underline"></div>
@@ -24,24 +23,14 @@
 
 <style lang="scss">
   .money {
-      width: 60%;
-      height: 80%;
+      width: 100%;
       font-size: 15px;
       font-weight: 400;
-      // background-color: coral;
-      color: white;
-      margin: 0 auto;
-      padding: 10px;
-      border-radius: 8px;
-      h1 {
-          margin: 20px auto;
-      }
-      .currancy {
+      color: rgb(0, 0, 0);
+      .currency {
         text-align: left;
-        margin: 0 auto;
-        width: 45%;
-        height: 45%;
-        padding: 5% 36%;
+        margin: 100px auto 0;
+        max-width: 300px;
         .twd,.jpy,.usd{
           height: 40px;
           width: 100%;
@@ -49,19 +38,13 @@
           position: relative;
 
           input {
-            width: 60%;
+            width: 98%;
             height: 30px;
             font-size: 18px;
             border: none;
             outline: none;
-            border-bottom: 2px solid black;
-            background-color: #929191;
-            // color: white;
-
-            &:focus ~ label,
-            &:valid ~ label {
-              transform: translateY(-30px);
-            }
+            border-bottom: 2px solid #000000;
+            background-color: #ffffff;
           }
           label {
             display: block;
@@ -69,7 +52,7 @@
             font-size: 18px;
             font-weight: 900;
             position: absolute;
-            bottom: 10px;
+            bottom: 45px;
             left: 0;
             pointer-events: none;
             transition: all 0.3 ease;
@@ -79,14 +62,14 @@
           position: absolute;
           bottom: 6px;
           height: 2px;
-          width: 61%;
+          width: 100%;
 
           &::before {
             position: absolute;
             content: "";
             height: 100%;
             width: 100%;
-            background: white;
+            background: rgb(70, 160, 245);
             transform: scaleX(0);
             transition: transform 0.3s ease;
           }
@@ -102,13 +85,16 @@
 <script>
 export default {
   name: 'MoneyFormat',
+  props: {
+    msg: String
+  },
   data: () => ({
     twd: ''
   }),
   computed: {
     jpy: {
       get () {
-        return Number.parseFloat(Number(this.twd) / 0.23).toFixed(3)
+        return this.isNum(this.twd) ? Number.parseFloat(Number(this.twd) / 0.23).toFixed(3) : ''
       },
       set (val) {
         this.twd = Number.parseFloat(Number(val) * 0.23).toFixed(3)
@@ -116,15 +102,21 @@ export default {
     },
     usd: {
       get () {
-        return Number.parseFloat(Number(this.twd) / 29.62).toFixed(3)
+        return this.isNum(this.twd) ? Number.parseFloat(Number(this.twd) / 29.62).toFixed(3) : ''
       },
       set (val) {
         this.twd = Number.parseFloat(Number(val) * 29.62).toFixed(3)
       }
     }
   },
-  props: {
-    msg: String
+  methods: {
+    isNum: function (num) {
+      if (num !== '' && !isNaN(num)) {
+        return true
+      } else {
+        return false
+      }
+    }
   }
 }
 </script>

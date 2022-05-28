@@ -2,7 +2,6 @@
   <div class="about">
     <h1>This is an about page</h1>
     <div class="info">
-      <img src="../img/S__14434492.jpg" alt="">
     </div>
   </div>
 </template>

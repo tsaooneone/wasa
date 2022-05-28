@@ -5,13 +5,16 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/work">Work</router-link>
     </nav>
-    <router-view/>
+
+    <div class="container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
 body{
-  background-color: #929191;
+  background-color: #fff;
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -27,9 +30,13 @@ body{
       color: #2c3e50;
 
       &.router-link-exact-active {
-        color: rgb(255, 255, 255);
+        color: rgb(107, 171, 245);
       }
     }
+  }
+  .container{
+    width: 80vw;
+    margin: 0 auto;
   }
 }
 </style>
