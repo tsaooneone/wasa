@@ -2,9 +2,9 @@
     <div class="header">
         <nav>
             <img src="../../img/member.png">
-            <router-link tag="li" to="/home">Home</router-link>
-            <router-link tag="li" to="/about">About</router-link>
-            <router-link tag="li" to="/work">Work</router-link>
+            <router-link tag="li" to="/work1">Work1</router-link>
+            <router-link tag="li" to="/work2">Work2</router-link>
+            <router-link tag="li" to="/work3">Work3</router-link>
         </nav>
     </div>
 </template>
