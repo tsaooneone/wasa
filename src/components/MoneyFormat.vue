@@ -43,7 +43,7 @@
             font-size: 18px;
             border: none;
             outline: none;
-            border-bottom: 2px solid #000000;
+            border-bottom: 2px solid #f7efef;
             background-color: #ffffff;
           }
           label {
@@ -60,7 +60,7 @@
         }
         .underline {
           position: absolute;
-          bottom: 6px;
+          bottom: 10px;
           height: 2px;
           width: 100%;
 
@@ -69,7 +69,7 @@
             content: "";
             height: 100%;
             width: 100%;
-            background: rgb(70, 160, 245);
+            background: #3f51b5;
             transform: scaleX(0);
             transition: transform 0.3s ease;
           }

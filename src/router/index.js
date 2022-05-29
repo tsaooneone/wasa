@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/Work1View.vue'
+// import HomeView from '../views/Work1View.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
+  // {
+  //   path: '/',
+  //   name: 'home',
+  //   component: HomeView
+  // },
   {
     path: '/work1',
     name: 'work1',
@@ -22,6 +22,11 @@ const routes = [
     path: '/work2',
     name: 'work2',
     component: () => import('../views/Work2View.vue')
+  },
+  {
+    path: '/work3',
+    name: 'work3',
+    component: () => import('../views/Work3View.vue')
   }
 ]
 
