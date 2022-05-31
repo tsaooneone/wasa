@@ -1,6 +1,6 @@
 <template>
     <div :class='theme === "light" ? "light" : theme === "dark" ? "dark" : ""'>
-        {{ this.$theme }}
+        {{ this.theme }}
         <button @click='theme = "dark"'>Dark</button>
         <button @click='theme = "light"'>Light</button>
     </div>
