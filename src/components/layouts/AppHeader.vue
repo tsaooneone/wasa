@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <nav>
-            <img src="../../img/member.png">
+            <img src="../../assets/member.png">
             <router-link tag="li" to="/">Home</router-link>
             <router-link tag="li" to="/work1">Work1</router-link>
             <router-link tag="li" to="/work2">Work2</router-link>
