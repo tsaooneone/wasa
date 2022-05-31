@@ -2,6 +2,7 @@
     <div class="header">
         <nav>
             <img src="../../img/member.png">
+            <router-link tag="li" to="/">Home</router-link>
             <router-link tag="li" to="/work1">Work1</router-link>
             <router-link tag="li" to="/work2">Work2</router-link>
             <router-link tag="li" to="/work3">Work3</router-link>
